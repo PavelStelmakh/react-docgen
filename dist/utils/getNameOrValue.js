@@ -4,7 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getNameOrValue;
+
 var _astTypes = require("ast-types");
+
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -20,11 +22,14 @@ var _astTypes = require("ast-types");
  */
 function getNameOrValue(path, raw) {
   const node = path.node;
+
   switch (node.type) {
     case _astTypes.namedTypes.Identifier.name:
       return node.name;
+
     case _astTypes.namedTypes.Literal.name:
       return raw ? node.raw : node.value;
+
     default:
       throw new TypeError('Argument must be an Identifier or a Literal');
   }

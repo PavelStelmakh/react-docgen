@@ -1,12 +1,16 @@
 "use strict";
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getClassMemberValuePath;
+
 var _astTypes = require("ast-types");
+
 var _getNameOrValue = _interopRequireDefault(require("./getNameOrValue"));
+
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -15,7 +19,6 @@ var _getNameOrValue = _interopRequireDefault(require("./getNameOrValue"));
  *
  * 
  */
-
 function getClassMemberValuePath(classDefinition, memberName) {
   // Fortunately it seems like that all members of a class body, be it
   // ClassProperty or MethodDefinition, have the same structure: They have a
